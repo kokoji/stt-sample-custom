@@ -31,7 +31,7 @@ COPY --from=build /opt/app-root/src/*.js* /opt/app-root/src/
 
 RUN npm install --only=prod
 
-ENV PORT 5000
+ENV PORT 3000
 
-EXPOSE 5000
+EXPOSE 3000
 CMD ["npm", "start"]

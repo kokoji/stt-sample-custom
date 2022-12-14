@@ -99,6 +99,6 @@ npm install
 npm start
 ```
 
-The application will be available in your browser at http://localhost:5000.  Return to the README.md for instructions on how to use the app.
+The application will be available in your browser at http://localhost:3000.  Return to the README.md for instructions on how to use the app.
 
 [![return](https://raw.githubusercontent.com/IBM/pattern-utils/master/deploy-buttons/return.png)](../../README.md#3-use-the-app)

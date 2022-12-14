@@ -13,7 +13,7 @@ options.add_argument('--disable-dev-shm-usage')
 driver = webdriver.Chrome(options=options)
 success = False
 try:
-    app_url = os.environ.get("APP_URL", "http://localhost:5000/")
+    app_url = os.environ.get("APP_URL", "http://localhost:3000/")
     print("APP_URL: ", app_url)
     driver.get(app_url)  # Open a browser to the app's landing page
     print("Title: ", driver.title)

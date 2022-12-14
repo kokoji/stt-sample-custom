@@ -4,7 +4,7 @@ jest.setTimeout(10000);
 const TIMEOUT = { timeout: 3000 };
 describe('Input methods', () => {
   beforeEach(async () => {
-    await page.goto('http://localhost:5000');
+    await page.goto('http://localhost:3000');
   });
 
   it('Sample audio', async () => {
@@ -29,7 +29,7 @@ describe('Input methods', () => {
     await (await page.waitForXPath('//*[text()="Play audio sample"]', TIMEOUT)).click();
 
     // Wait for the audio to play for a bit.
-    await page.waitForTimeout(5000);
+    await page.waitForTimeout(3000);
 
     // Check transcript (CI checks box exists. Missing creds to check content.)
     expect(await page.waitForXPath('//*[@class="transcript-box"]', TIMEOUT)).toBeTruthy();
@@ -54,7 +54,7 @@ describe('Input methods', () => {
     await (await page.waitForXPath('//*[@id="id1"]', TIMEOUT)).uploadFile('public/audio/en-US_Broadband-sample.wav');
 
     // Wait for the audio to play for a bit.
-    await page.waitForTimeout(5000);
+    await page.waitForTimeout(3000);
 
     // Check transcript (CI checks box exists. Missing creds to check content.)
     expect(await page.waitForXPath('//*[@class="transcript-box"]', TIMEOUT)).toBeTruthy();
