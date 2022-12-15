@@ -2,6 +2,7 @@
 
   {
     "name": "ja-JP_BroadbandModel",
+    "nameid": "ja-JP_BroadbandModel0",
     "language_customization_id": "25739a1f-9887-4f35-8853-f34e2ca93b16",
     "language": "ja-JP",
     "url": "https://api.jp-tok.speech-to-text.watson.cloud.ibm.com/instances/123ed3f0-e125-4835-a4ae-228fc1923c1c/v1/customizations/25739a1f-9887-4f35-8853-f34e2ca93b16",
@@ -13,5 +14,35 @@
       "speaker_labels": true
     },
     "description": "Japanese Custom(16khz Broadband)"
+  },
+  {
+    "name": "ja-JP_BroadbandModelx",
+    "nameid": "ja-JP_BroadbandModel1",
+    "language_customization_id": "25739a1f-9887-4f35-8853-f34e2ca93b1x",
+    "language": "ja-JP",
+    "url": "https://api.jp-tok.speech-to-text.watson.cloud.ibm.com/instances/123ed3f0-e125-4835-a4ae-228fc1923c1c/v1/customizations/25739a1f-9887-4f35-8853-f34e2ca93b16",
+    "rate": 16000,
+    "filename": "ja-JP_Broadband-sample.wav",
+    "keywords": "音声認識, ディープラーニング, 技術",
+    "supported_features": {
+      "custom_language_model": true,
+      "speaker_labels": true
+    },
+    "description": "Japanese Custom2(16khz Broadband)"
+  },
+  {
+    "name": "ja-JP_BroadbandModel",
+    "nameid": "ja-JP_BroadbandModel2",
+    "language_customization_id": null,
+    "language": "ja-JP",
+    "url": "https://stream.watsonplatform.net/speech-to-text/api/v1/models/ja-JP_BroadbandModel",
+    "rate": 16000,
+    "filename": "ja-JP_Broadband-sample.wav",
+    "keywords": "音声認識, ディープラーニング, 技術",
+    "supported_features": {
+      "custom_language_model": true,
+      "speaker_labels": true
+    },
+    "description": "Japanese (16khz Broadband)"
   }
 ]

@@ -215,6 +215,12 @@ export const ServiceContainer = () => {
 
   const onStartPlayingFileUpload = async recognizeConfig => {
     cleanUpOldStreamIfNecessary();
+    console.log("recognizeConfig: ",recognizeConfig);
+    if(recognizeConfig.languageCustomizationId == undefined){
+      console.log("languageCustomizationId deleted! ");
+      delete recognizeConfig['languageCustomizationId'];
+    }
+    
 
     const stream = recognizeFile(recognizeConfig);
     await readAudioFileForVisualization(recognizeConfig.file);

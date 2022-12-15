@@ -9,6 +9,7 @@ export const SubmitContainer = ({
   isSamplePlaying,
   isUploadPlaying,
   keywordText,
+  languageCustomizationId,
   modelName,
   onError,
   onStartPlayingFileUpload,
@@ -59,7 +60,7 @@ export const SubmitContainer = ({
       keywords: keywordList.length > 0 ? lowerCasedKeywords : undefined,
       keywordsThreshold: keywordList.length > 0 ? 0.01 : undefined,
       model: modelName,
-      languageCustomizationId: "25739a1f-9887-4f35-8853-f34e2ca93b16",
+      languageCustomizationId: languageCustomizationId,
       objectMode: true,
       play: true,
       realtime: true,
@@ -70,6 +71,9 @@ export const SubmitContainer = ({
 
     return options;
   };
+
+
+  // languageCustomizationId: "25739a1f-9887-4f35-8853-f34e2ca93b16",
 
   const getSampleAudioConfig = async () => {
     const baseConfig = await getBaseAudioConfig();

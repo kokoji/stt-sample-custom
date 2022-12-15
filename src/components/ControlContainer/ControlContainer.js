@@ -25,21 +25,34 @@ export const ControlContainer = ({
 }) => {
   const dropdownChoices = models.map(model => ({
     id: model.name,
+    nameid: model.nameid,
     label: model.description,
     supportsSpeakerLabels: model.supported_features.speaker_labels,
   }));
 
   const [model, selectModel] = useState(dropdownChoices[0]);
   const [keywordText, setKeywordText] = useState(models[0].keywords);
+  const [languageCustomizationId,setLanguageCustomizationId] = useState(models[0].language_customization_id);
   const [useSpeakerLabels, setUseSpeakerLabels] = useState(false);
 
   const onChangeLanguageModel = newModel => {
     selectModel(newModel.selectedItem);
 
+    console.log("newModel.selectedItem.id= ",newModel.selectedItem.id);
+
     const newKeywordText = models.find(
-      model => model.name === newModel.selectedItem.id,
+      model => model.nameid === newModel.selectedItem.nameid,
     ).keywords;
+    const newLanguageCustomizationId = models.find(
+      model => model.nameid === newModel.selectedItem.nameid,
+    ).language_customization_id;
+
     setKeywordText(newKeywordText);
+    console.log("setLanguageCustomizationId before: ",languageCustomizationId);
+    setLanguageCustomizationId(newLanguageCustomizationId);
+    console.log("setLanguageCustomizationId set");
+    console.log("setLanguageCustomizationId: after",languageCustomizationId);
+
 
     if (useSpeakerLabels && !newModel.selectedItem.supportsSpeakerLabels) {
       setUseSpeakerLabels(false);
@@ -94,6 +107,7 @@ export const ControlContainer = ({
         isSamplePlaying={isSamplePlaying}
         isUploadPlaying={isUploadPlaying}
         keywordText={keywordText}
+        languageCustomizationId={languageCustomizationId}
         modelName={model && model.id}
         onError={onError}
         onStartPlayingFileUpload={onStartPlayingFileUpload}
