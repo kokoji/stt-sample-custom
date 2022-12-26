@@ -16,10 +16,13 @@
 3. src/data/models.json に、アクセスしたいカスタム言語モデルのアクセス情報を記載する。
     * その際、カスタム言語モデルのカスタムIDを、以下のように記載する（デフォルトモデルの場合にはnullを指定）。
     * "language_customization_id": "53fe1165-4115-4d32-ac8d-f6x8319exxxx",
+    * 次に、urlに、以下のように記載する。
+    * "url": "https://api.jp-tok.speech-to-text.watson.cloud.ibm.com/instances/{instance_id}/v1/customizations/{customization_id}",
 
 3. npm install
 4. npm run build
 5. npm start
+6. localhost:3000 でアプリにアクセス可能
 
 ## ROKSでの実行手順
 
