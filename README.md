@@ -2,6 +2,67 @@
 
 # Speech to Text Code Pattern
 
+このアプリは、基本的には、このサイト(https://github.com/IBM/speech-to-text-code-pattern)のアプリを使用しています。
+
+そして、そのアプリから、学習などをした、カスタム言語モデルに対して実行できるように変更しています。
+
+## ローカルでの実行手順
+
+1. git clone https://github.com/kokoji/stt-sample-custom
+2. .env.exampleを.envにコピーし、以下の３つのパラメータを有効にする。
+    1. SPEECH_TO_TEXT_AUTH_TYPE=iam
+    2. SPEECH_TO_TEXT_APIKEY=[STTのAPIKEY]
+    3. SPEECH_TO_TEXT_URL=[STTのURL]
+3. src/data/models.json に、アクセスしたいカスタム言語モデルのアクセス情報を記載する。
+    * その際、カスタム言語モデルのカスタムIDを、以下のように記載する（デフォルトモデルの場合にはnullを指定）。
+    * "language_customization_id": "53fe1165-4115-4d32-ac8d-f6x8319exxxx",
+
+3. npm install
+4. npm run build
+5. npm start
+
+## ROKSでの実行手順
+
+1. Operator Hubを開いて、Developer Catalogをクリック
+
+![ope1](doc/source/images2/roks01.png)
+
+2. Developer Catalogでnodeと入力。右上のnode.jsをクリック
+
+![ope1](doc/source/images2/roks02.png)
+
+3. Create Application
+
+![ope1](doc/source/images2/roks03.png)
+
+4. Run command: start,  gitリポジトリにurlを入力
+
+![ope1](doc/source/images2/roks04.png)
+
+5. nameに名前を入力して createボタン。
+
+![ope1](doc/source/images2/roks05.png)
+
+6. Deploymentのyamlのspecに以下を追記。(ConfigMapの値を使用するため)
+
+    * envFrom:
+    * - configMapRef:
+    * name: sttexample
+
+![ope1](doc/source/images2/roks06.png)
+
+7. Config Mapに.envのパラメータを設定。
+
+![ope1](doc/source/images2/roks07.png)
+
+8. 初めはエラーになっていたPodがOK、Runningになる。
+
+9. Networking/Routesから、LocationのURLをクリックし、アプリを表示することができる。
+
+
+
+以下はベースのアプリの原文のまま。
+
 Sample React app for playing around with the Watson Speech to Text service.
 
 ✨ **Demo:** https://speech-to-text-code-pattern.ng.bluemix.net/ ✨

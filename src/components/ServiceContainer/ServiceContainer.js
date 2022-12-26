@@ -222,7 +222,9 @@ export const ServiceContainer = () => {
     }
     
 
+    console.log("recognizeConfig= ",recognizeConfig);
     const stream = recognizeFile(recognizeConfig);
+    console.log("stream= ",stream);
     await readAudioFileForVisualization(recognizeConfig.file);
     dispatch({
       isUploadPlaying: true,
