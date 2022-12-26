@@ -2,7 +2,7 @@
 
 # Speech to Text Code Pattern
 
-このアプリは、基本的には、このサイト(https://github.com/IBM/speech-to-text-code-pattern)のアプリを使用しています。
+このアプリは、基本的には、このサイト( https://github.com/IBM/speech-to-text-code-pattern ) のアプリを使用しています。
 
 そして、そのアプリから、学習などをした、カスタム言語モデルに対して実行できるように変更しています。
 
