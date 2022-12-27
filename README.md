@@ -13,10 +13,10 @@
     1. SPEECH_TO_TEXT_AUTH_TYPE=iam
     2. SPEECH_TO_TEXT_APIKEY=[STTのAPIKEY]
     3. SPEECH_TO_TEXT_URL=[STTのURL]
-3. src/data/models.json に、アクセスしたいカスタム言語モデルのアクセス情報を記載する。
+3. src/data/models.json に、アクセスしたいカスタム言語モデルのアクセス情報を記載する。カスタムモデルの記載方法は、src/data/models.json.custom.exampleを参照し必要に応じてmodels.jsonを更新または追記する。（注：models.json の nameは一意になるようにする。descriptionの内容が、アプリのモデル選択のプルダウンに表示される）
     * その際、カスタム言語モデルのカスタムIDを、以下のように記載する（デフォルトモデルの場合にはnullを指定）。
     * "language_customization_id": "53fe1165-4115-4d32-ac8d-f6x8319exxxx",
-    * 次に、urlに、以下のように記載する。
+    * urlには、以下のように記載する。
     * "url": "https://api.jp-tok.speech-to-text.watson.cloud.ibm.com/instances/{instance_id}/v1/customizations/{customization_id}",
 
 3. npm install
@@ -38,7 +38,7 @@
 
 ![ope1](doc/source/images2/roks03.png)
 
-4. Run command: start,  gitリポジトリにurlを入力
+4. Run command: start,  gitリポジトリにurlを入力（ここで設定するgitリポジトリは、各自のリポジトリを設定すること）
 
 ![ope1](doc/source/images2/roks04.png)
 

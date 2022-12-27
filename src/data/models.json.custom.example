@@ -1,0 +1,18 @@
+[
+
+  {
+    "name": "ja-JP_BroadbandModel",
+    "nameid": "ja-JP_BroadbandModel0",
+    "language_customization_id": "53fe1165-4115-4d32-ac8d-f6a8319xxxxx",
+    "language": "ja-JP",
+    "url": "https://api.jp-tok.speech-to-text.watson.cloud.ibm.com/instances/123ed3f0-e125-4835-a4ae-228fc1xxxxxx/v1/customizations/25739a1f-9887-4f35-8853-f34e2caxxxxx",
+    "rate": 16000,
+    "filename": "ja-JP_Broadband-sample.wav",
+    "keywords": "音声認識, ディープラーニング, 技術",
+    "supported_features": {
+      "custom_language_model": true,
+      "speaker_labels": true
+    },
+    "description": "Japanese Custom(16khz Broadband)"
+  }
+]
