@@ -38,7 +38,6 @@ export const ControlContainer = ({
   const onChangeLanguageModel = newModel => {
     selectModel(newModel.selectedItem);
 
-    console.log("newModel.selectedItem.id= ",newModel.selectedItem.id);
 
     const newKeywordText = models.find(
       model => model.nameid === newModel.selectedItem.nameid,
@@ -48,10 +47,7 @@ export const ControlContainer = ({
     ).language_customization_id;
 
     setKeywordText(newKeywordText);
-    console.log("setLanguageCustomizationId before: ",languageCustomizationId);
     setLanguageCustomizationId(newLanguageCustomizationId);
-    console.log("setLanguageCustomizationId set");
-    console.log("setLanguageCustomizationId: after",languageCustomizationId);
 
 
     if (useSpeakerLabels && !newModel.selectedItem.supportsSpeakerLabels) {
