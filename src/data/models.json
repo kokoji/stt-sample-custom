@@ -1,6 +1,7 @@
 [
   {
     "name": "ja-JP_BroadbandModel",
+    "nameid": "ja-JP_BroadbandModel",
     "language": "ja-JP",
     "language_customization_id": null,
     "url": "https://stream.watsonplatform.net/speech-to-text/api/v1/models/ja-JP_BroadbandModel",
@@ -15,6 +16,7 @@
   },
   {
     "name": "ja-JP_NarrowbandModel",
+    "nameid": "ja-JP_NarrowbandModel",
     "language": "ja-JP",
     "language_customization_id": null,
     "url": "https://stream.watsonplatform.net/speech-to-text/api/v1/models/ja-JP_NarrowbandModel",

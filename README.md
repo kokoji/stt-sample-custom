@@ -18,6 +18,8 @@
     * "language_customization_id": "53fe1165-4115-4d32-ac8d-f6x8319exxxx",
     * urlには、以下のように記載する。
     * "url": "https://api.jp-tok.speech-to-text.watson.cloud.ibm.com/instances/{instance_id}/v1/customizations/{customization_id}",
+    * nameidは、models.jsonの中で一位になるようにする。例えばja-JP_BroadbandModelをベースにカスタム言語モデルを作成して学習させた場合、学習なしのデフォルトモデルja-JP_BroadbandModelと区別がつくようにする必要がある。
+    * "nameid": "xxxx",
 
 3. npm install
 4. npm run build

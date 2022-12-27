@@ -3,9 +3,9 @@
   {
     "name": "ja-JP_BroadbandModel",
     "nameid": "ja-JP_BroadbandModel0",
-    "language_customization_id": "53fe1165-4115-4d32-ac8d-f6a8319xxxxx",
+    "language_customization_id": "53fe1165-4115-4d32-ac8d-f6a8319e7886",
     "language": "ja-JP",
-    "url": "https://api.jp-tok.speech-to-text.watson.cloud.ibm.com/instances/123ed3f0-e125-4835-a4ae-228fc1xxxxxx/v1/customizations/25739a1f-9887-4f35-8853-f34e2caxxxxx",
+    "url": "https://api.jp-tok.speech-to-text.watson.cloud.ibm.com/instances/123ed3f0-e125-4835-a4ae-228fc1923c1c/v1/customizations/25739a1f-9887-4f35-8853-f34e2ca93b16",
     "rate": 16000,
     "filename": "ja-JP_Broadband-sample.wav",
     "keywords": "音声認識, ディープラーニング, 技術",
