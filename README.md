@@ -15,11 +15,11 @@
     3. SPEECH_TO_TEXT_URL=[STTのURL]
 3. src/data/models.json に、アクセスしたいカスタム言語モデルのアクセス情報を記載する。カスタムモデルの記載方法は、src/data/models.json.custom.exampleを参照し必要に応じてmodels.jsonを更新または追記する。（注：models.json の nameはベースのモデル名になるようにする。descriptionの値が、アプリのモデル選択のプルダウンに表示される）
     * カスタム言語モデルのカスタムIDには、以下のように記載する（デフォルトモデルの場合にはnullを指定）。
-    * "language_customization_id": "53fe1165-4115-4d32-ac8d-f6x8319exxxx",
+        * "language_customization_id": "53fe1165-4115-4d32-ac8d-f6x8319exxxx",
     * urlには、以下のように記載する。
-    * "url": "https://api.jp-tok.speech-to-text.watson.cloud.ibm.com/instances/{instance_id}/v1/customizations/{customization_id}",
+        * "url": "https://api.jp-tok.speech-to-text.watson.cloud.ibm.com/instances/{instance_id}/v1/customizations/{customization_id}",
     * nameidは、models.jsonの中で一位になるようにする。例えばja-JP_BroadbandModelをベースにカスタム言語モデルを作成して学習させた場合、学習なしのデフォルトモデルja-JP_BroadbandModelと区別がつくようにする必要がある。
-    * "nameid": "xxxx",
+        * "nameid": "xxxx",
 
 3. npm install
 4. npm run build
@@ -40,7 +40,7 @@
 
 ![ope1](doc/source/images2/roks03.png)
 
-4. Run command: start,  gitリポジトリにurlを入力（ここで設定するgitリポジトリは、各自のリポジトリを設定すること）
+4. Run command: start,  gitリポジトリにurlを入力（ここで設定するgitリポジトリは、各自のリポジトリを設定すること。（本リポジトリをcloneし、ローカルの手順３の、src/data/models.jsonを各自のカスタムモデル情報に更新したものを各自のリポジトリにpushする。））
 
 ![ope1](doc/source/images2/roks04.png)
 
