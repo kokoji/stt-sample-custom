@@ -50,9 +50,9 @@
 
 6. Deploymentのyamlのspecに以下を追記。(ConfigMapの値を使用するため)
 
-    * envFrom:
-    * - configMapRef:
-    * name: sttexample
+    > envFrom:  
+    > ¥- configMapRef:  
+    > name: sttexample  
 
 ![ope1](doc/source/images2/roks06.png)
 
