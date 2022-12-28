@@ -8,6 +8,8 @@
 
 ## ローカルでの実行手順
 
+前提：ローカルに、git、node.jsの環境があること。
+
 1. git clone https://github.com/kokoji/stt-sample-custom
 2. .env.exampleを.envにコピーし、以下の３つのパラメータを有効にする。
     1. SPEECH_TO_TEXT_AUTH_TYPE=iam
@@ -33,6 +35,8 @@
 6. localhost:3000 でアプリにアクセス可能
 
 ## ROKSでの実行手順
+
+前提　ローカルでの実行手順を実施済であること。
 
 1. Operator Hubを開いて、Developer Catalogをクリック
 
@@ -64,14 +68,26 @@
 
 ![ope1](doc/source/images2/roks06.png)
 
-7. Config Mapに.envのパラメータを設定。
+7. Config Mapでsttexampleを作成し、に.envのパラメータを設定。
+
+    ```yaml
+    data:
+      PORT: '8080'
+      SPEECH_TO_TEXT_APIKEY: Q7__M8hlCRV0HRjQSOwVPgq3LE-DsTqJUaxxxxxxxx
+      SPEECH_TO_TEXT_AUTH_TYPE: iam
+      SPEECH_TO_TEXT_URL: >-
+        https://api.jp-tok.speech-to-text.watson.cloud.ibm.com/instances/123ed3f0-e125-4835-a4ae-228xxxxxxx
+    ```
 
 ![ope1](doc/source/images2/roks07.png)
 
 8. 初めはエラーになっていたPodがOK、Runningになる。
 
+![ope1](doc/source/images2/roks08.png)
+
 9. Networking/Routesから、LocationのURLをクリックし、アプリを表示することができる。
 
+![ope1](doc/source/images2/roks09.png)
 
 
 以下はベースのアプリの原文のまま。
