@@ -217,7 +217,15 @@ export const ServiceContainer = () => {
     cleanUpOldStreamIfNecessary();
     if(recognizeConfig.languageCustomizationId == undefined){
       delete recognizeConfig['languageCustomizationId'];
+      delete recognizeConfig['keywordText'];
     }
+
+    if(recognizeConfig.acousticCustomizationId == undefined){
+      delete recognizeConfig['acousticCustomizationId'];
+      delete recognizeConfig['keywordText'];
+    }
+    
+
     
 
     const stream = recognizeFile(recognizeConfig);

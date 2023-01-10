@@ -32,7 +32,8 @@ export const ControlContainer = ({
 
   const [model, selectModel] = useState(dropdownChoices[0]);
   const [keywordText, setKeywordText] = useState(models[0].keywords);
-  const [languageCustomizationId,setLanguageCustomizationId] = useState(models[0].language_customization_id);
+  const [languageCustomizationId,setLanguageCustomizationId] = useState(models[1].language_customization_id);
+  const [acousticCustomizationId,setAcousticCustomizationId] = useState(models[1].acoustic_customization_id);
   const [useSpeakerLabels, setUseSpeakerLabels] = useState(false);
 
   const onChangeLanguageModel = newModel => {
@@ -46,8 +47,15 @@ export const ControlContainer = ({
       model => model.nameid === newModel.selectedItem.nameid,
     ).language_customization_id;
 
+    const newAcousticCustomizationId = models.find(
+      model => model.nameid === newModel.selectedItem.nameid,
+    ).acoustic_customization_id;
+
     setKeywordText(newKeywordText);
     setLanguageCustomizationId(newLanguageCustomizationId);
+
+    setAcousticCustomizationId(newAcousticCustomizationId);
+
 
 
     if (useSpeakerLabels && !newModel.selectedItem.supportsSpeakerLabels) {
@@ -104,6 +112,7 @@ export const ControlContainer = ({
         isUploadPlaying={isUploadPlaying}
         keywordText={keywordText}
         languageCustomizationId={languageCustomizationId}
+        acousticCustomizationId={acousticCustomizationId}
         modelName={model && model.id}
         onError={onError}
         onStartPlayingFileUpload={onStartPlayingFileUpload}
