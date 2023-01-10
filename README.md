@@ -16,10 +16,15 @@
     2. SPEECH_TO_TEXT_APIKEY=[STTのAPIKEY]
     3. SPEECH_TO_TEXT_URL=[STTのURL]
 3. src/data/models.json に、アクセスしたいカスタム言語モデルのアクセス情報を記載する。カスタムモデルの記載方法は、src/data/models.json.custom.exampleを参照し必要に応じてmodels.jsonを更新または追記する。（注：models.json の nameはベースのモデル名になるようにする。descriptionの値が、アプリのモデル選択のプルダウンに表示される）
-    * カスタム言語モデルのカスタムIDには、以下のように記載する（デフォルトモデルの場合にはnullを指定）。
+    * カスタム言語モデルのカスタムIDには、以下のように記載する（デフォルトモデルの場合、またはカスタム音響モデルのみの場合にはnullを指定）。
         ```yaml
          "language_customization_id": "53fe1165-4115-4d32-ac8d-f6x8319exxxx",
         ```
+    * カスタム音響モデルのカスタムIDには、以下のように記載する（デフォルトモデルの場合、またはカスタム言語モデルのみの場合にはnullを指定）。
+        ```yaml
+         "accoustic_customization_id": "2105e89f-7e5a-4de4-8b33-5183533xxxxx",
+        ```
+    * カスタム言語モデルとカスタム音響モデルを組み合わせる場合、language_customization_idとaccoustic_customization_idの両方記載する。
     * urlには、以下のように記載する。
         ```yaml
          "url": "https://api.jp-tok.speech-to-text.watson.cloud.ibm.com/instances/{instance_id}/v1/customizations/{customization_id}",
